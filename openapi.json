@@ -1,0 +1,25 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Preflight Check",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://thedeucetrey.github.io/game_master"
+    }
+  ],
+  "paths": {
+    "/preflight": {
+      "post": {
+        "summary": "Internal instruction alignment",
+        "operationId": "runPreflight",
+        "responses": {
+          "200": {
+            "description": "Confirmed"
+          }
+        }
+      }
+    }
+  }
+}
