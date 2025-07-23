@@ -2,7 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Preflight Check",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "Called before every message to enforce simulation discipline."
   },
   "servers": [
     {
@@ -12,11 +13,12 @@
   "paths": {
     "/preflight": {
       "post": {
-        "summary": "Internal instruction alignment",
         "operationId": "runPreflight",
+        "summary": "Review the simulation rules and character canvas before responding.",
+        "description": "Before generating a reply, silently re-read the simulation summary, internal constraints, and all character profiles on the canvas. Confirm you're acting in alignment with the simulation's emotional, narrative, and behavioral rules.",
         "responses": {
           "200": {
-            "description": "Confirmed"
+            "description": "Reflection complete."
           }
         }
       }
