@@ -1,5 +1,5 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "Preflight Check",
     "version": "1.0.0",
@@ -14,8 +14,8 @@
     "/preflight": {
       "post": {
         "operationId": "runPreflight",
-        "summary": "Review simulation rules, character canvas, time/place context, and story summary requirements.",
-        "description": "Before responding, reflect silently on: (1) the simulation summary rules, (2) all character profiles in the canvas, (3) the story’s current time, date, day of week, and location. Ensure characters do not reference tech or events from the future. Confirm you will: include the full timestamp in every entry; write EOW summaries every Sunday; and do a full chronological review of the story at the end of each month.",
+        "summary": "Reflect on rules, canvas, scene date/time/location, and whether EOW or monthly summaries are due.",
+        "description": "Enforces simulation alignment. Recheck summary rules, canvas, time/location, and story cadence before replying.",
         "responses": {
           "200": {
             "description": "Reflection complete."
