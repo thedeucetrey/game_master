@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Preflight Check",
-    "version": "1.0.0",
-    "description": "Executed before each response to enforce simulation discipline, time-awareness, and narrative consistency."
+    "title": "Life Simulation Actions",
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -14,11 +13,59 @@
     "/preflight": {
       "post": {
         "operationId": "runPreflight",
-        "summary": "Reflect on rules, canvas, scene date/time/location, and whether EOW or monthly summaries are due.",
-        "description": "Enforces simulation alignment. Recheck summary rules, canvas, time/location, and story cadence before replying.",
+        "summary": "Confirm simulation rules, time/place accuracy, character memory, and summary cadence.",
+        "description": "Mentally confirm simulation rules, scene timestamp, tech consistency, and summary schedule.",
         "responses": {
           "200": {
-            "description": "Reflection complete."
+            "description": "Preflight complete."
+          }
+        }
+      }
+    },
+    "/formatPost": {
+      "post": {
+        "operationId": "formatPost",
+        "summary": "Apply proper formatting: timestamp, location, structure, and spacing.",
+        "description": "Ensure clear date/time/place heading and clean paragraph breaks for scene text.",
+        "responses": {
+          "200": {
+            "description": "Post formatting confirmed."
+          }
+        }
+      }
+    },
+    "/enforceProseDiscipline": {
+      "post": {
+        "operationId": "enforceProseDiscipline",
+        "summary": "Elevate prose quality: immersive, stylized, and narrative-appropriate writing.",
+        "description": "Ensure prose is vivid, specific, and consistent with tone and world of the simulation.",
+        "responses": {
+          "200": {
+            "description": "Prose quality verified."
+          }
+        }
+      }
+    },
+    "/characterDialogueAudit": {
+      "post": {
+        "operationId": "characterDialogueAudit",
+        "summary": "Ensure each character speaks with unique, consistent, emotionally accurate voice.",
+        "description": "Check all character dialogue against personality, memory, and current emotional state.",
+        "responses": {
+          "200": {
+            "description": "Dialogue check passed."
+          }
+        }
+      }
+    },
+    "/submitSummary": {
+      "post": {
+        "operationId": "submitSummary",
+        "summary": "Submit weekly or monthly story summaries based on in-world date.",
+        "description": "If simulation date is Sunday or month-end, post appropriate summary.",
+        "responses": {
+          "200": {
+            "description": "Summary submitted."
           }
         }
       }
